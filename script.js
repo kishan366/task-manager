@@ -1,4 +1,4 @@
-let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+let tasks = [];
 
 const taskForm = document.getElementById('task-form');
 const taskInput = document.getElementById('task-input');
@@ -73,8 +73,6 @@ function updateMetrics() {
   
   pendingCount.textContent = pending;
   completedCount.textContent = completed;
-  
-  localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
 taskForm.addEventListener('submit', function(e) {
